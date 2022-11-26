@@ -1,2 +1,4 @@
-package lesson_3;public class less3 {
+package lesson_3;
+
+public class less3 {
 }
