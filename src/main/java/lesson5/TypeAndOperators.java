@@ -7,7 +7,7 @@ public class TypeAndOperators {
         int operand1 = 8;
         double operand2 = 12.6;
 
-        // целое число
+        // целое число будет деление и результат будет приведен к целому числу
         //int result = (int) operand2 / operand1;
 
         // залишок від ділення
@@ -42,7 +42,7 @@ public class TypeAndOperators {
         System.out.println(boolVar || boolVar1);
         System.out.println(boolVar && boolVar1);
 
-        System.out.println(operand1 < operand2);
+        System.out.println(operand1 < operand2);//сравниваем числа и результатом будет булевое значение
         System.out.println(operand1 < operand2 || boolVar1);
         System.out.println(operand1 != operand2 || boolVar1);
 

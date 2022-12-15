@@ -72,6 +72,7 @@ public class task {
                 rez = 5;
         }
         System.out.println(rez);
+        System.out.printf("Hello %s!%n", "World");
 
 
         }
