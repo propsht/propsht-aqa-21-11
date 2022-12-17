@@ -12,11 +12,11 @@ public class task {
 //            rez = 0;
 //        } else if ((x > -100) && (x < -50)) {
 //            rez = 1;
-//        } else if ((x >=-50) && (x<=0)) {
+//        } else if ((x >=-50) && (x <= 0)) {
 //            rez = 2;
-//        } else if ((x > 0) && (x<10)) {
+//        } else if ((x > 0) && (x < 10)) {
 //            rez = 3;
-//        } else if ((x>=10) && x< 115) {
+//        } else if ((x >= 10) && (x < 115)) {
 //            rez = 4;
 //        } else {
 //            rez = 5;

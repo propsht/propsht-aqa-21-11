@@ -32,7 +32,7 @@ public class MyEnum {
         }
 
         DayOfWeek [] values = DayOfWeek.values();
-        for (daOfWeek day: values){
+        for (DayOfWeek day: values){
             System.out.println(day.name() + "==>" + day.ordinal());
         }
 
