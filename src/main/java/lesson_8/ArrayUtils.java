@@ -1,4 +1,4 @@
-package org.brit.lesson8;
+package lesson_8;
 
 import java.util.Random;
 

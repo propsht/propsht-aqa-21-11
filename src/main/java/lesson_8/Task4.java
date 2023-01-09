@@ -1,4 +1,4 @@
-package org.brit.lesson8;
+package lesson_8;
 
 public class Task4 {
     public static void main(String[] args) {
