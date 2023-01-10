@@ -1,5 +1,5 @@
-package Lesson7;
-
+package HomeWork;
+//find major and minnor dioganal in matrix
 public class HomeWork5 {
     public static void main(String[] args) {
         int i = 0, j = 0;

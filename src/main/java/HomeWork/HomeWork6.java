@@ -1,4 +1,6 @@
-package Lesson7;
+package HomeWork;
+//find the sum of each row and each column of a matrix
+
 public class HomeWork6 {
     static int[][] sourse;
     int i = 0;
