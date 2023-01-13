@@ -8,9 +8,8 @@ public class HomeWork6 {
     static int[] sumsInRows;
 
 
-
     //вычисление сумм
-    public static int[] sumsInRows (int[][] sourse) {
+    public static int[] sumsInRows(int[][] sourse) {
 
         int[] sumsInRows = new int[sourse.length];
 
@@ -20,7 +19,7 @@ public class HomeWork6 {
             for (int j = 0; j < sourse[i].length; j++) {
                 sumsInRows[i] = sumsInRows[i] + sourse[i][j];
             }
-           System.out.print(sumsInRows[i] + ", " );
+            System.out.print(sumsInRows[i] + ", ");
 
 
         }
@@ -30,7 +29,6 @@ public class HomeWork6 {
 
 
     }
-
 
 
     public static void main(String[] args) {
