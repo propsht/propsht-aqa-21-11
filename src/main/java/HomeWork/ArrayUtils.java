@@ -53,14 +53,17 @@ public class ArrayUtils {
     public static int[] insertElementInArray(int[] array, int element, int position) {
         int i = 0;
         int n = array.length;
-        int[] newArray = new int[n];
+        int[] newArray = new int[n + 1];
 
 
-        for (i = 0; i < n; i++) {
-            if (i == position) {
+        for (i = 0; i < n + 1; i++) {
+
+            if (i < position) {
+                newArray[i] = array[i];
+            } else if (i == position) {
                 newArray[i] = element;
             } else {
-                newArray[i] = array[i];
+                newArray[i] = array[i - 1];
             }
 
         }
@@ -114,14 +117,17 @@ public class ArrayUtils {
     public static double[] insertElementInArray(double[] array, double element, int position) {
         int i = 0;
         int n = array.length;
-        double[] newArray = new double[n];
+        double[] newArray = new double[n + 1];
 
 
-        for (i = 0; i < n; i++) {
-            if (i == position) {
+        for (i = 0; i < n + 1; i++) {
+
+            if (i < position) {
+                newArray[i] = array[i];
+            } else if (i == position) {
                 newArray[i] = element;
             } else {
-                newArray[i] = array[i];
+                newArray[i] = array[i - 1];
             }
 
         }
@@ -141,8 +147,8 @@ public class ArrayUtils {
 
     // Add Element to String in the end
     public static String addElementToString(String string, char ch) {
-        string = string +ch;
-    return string;
+        string = string + ch;
+        return string;
     }
 
     // Add Element to String on beginning
@@ -160,15 +166,33 @@ public class ArrayUtils {
 
     // Insert Element to String on position
     public static String insertElementInString(String string, char ch, int position) {
-
+        int n = string.length();
         String newString = new String();
+        String newString1 = new String();
+        String newString2 = new String();
 
-        for (int i = 0; i < string.length(); i++) {
-            if (i == position) {
+        for (int i = 0; i < n + 1; i++) {
+
+            if (i < position) {
+                newString1 += string.charAt(i);
+            } else if (i > position) {
+                newString2 += string.charAt(i - 1);
+            } else {
                 newString = newString + ch;
             }
-            newString += string.charAt(i);
+
         }
+        newString = newString1 + newString + newString2;
+//        int n = string.length();
+//        String newString = new String();
+//
+//        for (int i = 0; i < n ; i++) {
+//            if (i == position) {
+//                newString = newString + ch;
+//            }
+//            newString += string.charAt(i);
+//        }
+
         return newString;
     }
 
