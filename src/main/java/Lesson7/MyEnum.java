@@ -5,9 +5,9 @@ import java.time.DayOfWeek;
 public class MyEnum {
     public static void main(String[] args) {
         // тип данніх переменная = присваиваем значение
-        DayOfWeek daOfWeek = DayOfWeek.SUNDAY;
+        DayOfWeek dayOfWeek = DayOfWeek.SUNDAY;
 
-        switch (daOfWeek){
+        switch (dayOfWeek){
             case SATURDAY:
             case SUNDAY:{
                 System.out.println("This is weekend");
@@ -31,10 +31,10 @@ public class MyEnum {
 
         }
 
-        DayOfWeek [] values = DayOfWeek.values();
-        for (DayOfWeek day: values){
-            System.out.println(day.name() + "==>" + day.ordinal());
-        }
+//        DayOfWeek [] values = DayOfWeek.values();
+//        for (DayOfWeek day: values){
+//            System.out.println(day.name() + "==>" + day.ordinal());
+//        }
 
 
 
