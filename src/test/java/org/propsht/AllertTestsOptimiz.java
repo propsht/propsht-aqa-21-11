@@ -21,6 +21,8 @@ public class AllertTestsOptimiz {
         driver.manage().window().maximize();
     }
 
+
+
     @AfterClass
     public void aferClass() {
         if (driver != null) {
