@@ -23,7 +23,7 @@ public class HW4_Calculator {
                 System.out.println("result = " + (operand1 - operand2));
                 break;
             }
-
+//
             case "/": {
                 if (operand2 == 0) {
                     System.out.println("небезпечна операція ");

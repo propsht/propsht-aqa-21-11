@@ -18,21 +18,27 @@ public class ArrayUtils {
     }
 
     // Print the original array
+//   А где запятые в выводе? - DONE
     public static void printArray(int[] array) {
-        for (int arrayElement : array) {
-            System.out.print(arrayElement + " ");
+        String[] stringArray = new String[array.length];
+        for (int i = 0; i < array.length; i++) {
+            stringArray[i] = Integer.toString(array[i]);
         }
-        System.out.println();
+
+        System.out.println(String.join(", ", stringArray));
     }
+
 
     // Add Element to Array in the end
     public static int[] addElementToArray(int[] array, int element) {
         int n = array.length;
         int newArray[] = new int[n + 1];
+        newArray[n] = element;
 
         for (int i = 0; i < n; i++) {
+            // Тебе это нужно сделать 1 раз после цикла - DONE
             newArray[i] = array[i];
-            newArray[n] = element;
+
         }
         return newArray;
     }
@@ -41,9 +47,10 @@ public class ArrayUtils {
     public static int[] addElementToArrayBeginning(int[] array, int element) {
         int n = array.length;
         int newArray[] = new int[n + 1];
+        newArray[0] = element;
 
         for (int i = 0; i < n; i++) {
-            newArray[0] = element;
+            // Тебе это нужно сделать 1 раз после цикла - DONE
             newArray[i + 1] = array[i];
         }
         return newArray;
@@ -95,10 +102,11 @@ public class ArrayUtils {
     public static double[] addElementToArray(double[] array, double element) {
         int n = array.length;
         double newArray[] = new double[n + 1];
+        newArray[n] = element;
 
         for (int i = 0; i < n; i++) {
+            // Тебе это нужно сделать 1 раз после цикла - DONE
             newArray[i] = array[i];
-            newArray[n] = element;
         }
         return newArray;
     }
@@ -106,9 +114,10 @@ public class ArrayUtils {
     public static double[] addElementToArrayBeginning(double[] array, double element) {
         int n = array.length;
         double newArray[] = new double[n + 1];
+        newArray[0] = element;
 
         for (int i = 0; i < n; i++) {
-            newArray[0] = element;
+            // Тебе это нужно сделать 1 раз после цикла - DONE
             newArray[i + 1] = array[i];
         }
         return newArray;
@@ -152,37 +161,57 @@ public class ArrayUtils {
     }
 
     // Add Element to String on beginning
+    // предыдущий метод в принципе ничем не отличается от этого
+    // Просто нужно поменять местами слогаемые и все
     public static String addElementToStringBeginning(String string, char ch) {
-        String newString = new String();
+        string = ch + string;
+        return string;
 
-        for (int i = 0; i < string.length(); i++) {
-            if (i == 0) {
-                newString = newString + ch;
-            }
-            newString += string.charAt(i);
-        }
-        return newString;
+//        String newString = new String();
+//
+//        for (int i = 0; i < string.length(); i++) {
+//            if (i == 0) {
+//                newString = newString + ch;
+//            }
+//            newString += string.charAt(i);
+//        }
+//        return newString;
     }
 
     // Insert Element to String on position
-    public static String insertElementInString(String string, char ch, int position) {
-        int n = string.length();
-        String newString = new String();
-        String newString1 = new String();
-        String newString2 = new String();
+    // тут идея очень простая
+    // у String есть методы substring(beginningIndex) и  substring(beginningIndex, endIndex)
+    // вот их и можно использовать
+    // Решение в 1 строку, ну или если объявлять переменные - то в 3
+    public static  String insertElementInString(String string, char ch, int position) {
 
-        for (int i = 0; i < n + 1; i++) {
+     return string.substring(0, position) + ch + string.substring(position+1,string.length());
 
-            if (i < position) {
-                newString1 += string.charAt(i);
-            } else if (i > position) {
-                newString2 += string.charAt(i - 1);
-            } else {
-                newString = newString + ch;
-            }
+    }
 
-        }
-        newString = newString1 + newString + newString2;
+
+
+
+
+//        int n = string.length();
+//        String newString = new String();
+//        String newString1 = new String();
+//        String newString2 = new String();
+//
+//        for (int i = 0; i < n + 1; i++) {
+//
+//            if (i < position) {
+//                newString1 += string.charAt(i);
+//            } else if (i > position) {
+//                newString2 += string.charAt(i - 1);
+//            } else {
+//                newString = newString + ch;
+//            }
+//
+//        }
+//        newString = newString1 + newString + newString2;
+
+
 //        int n = string.length();
 //        String newString = new String();
 //
@@ -192,10 +221,8 @@ public class ArrayUtils {
 //            }
 //            newString += string.charAt(i);
 //        }
-
-        return newString;
-    }
-
+//        return newString;
+// }
 
 // END STRING ___________________________________________________________________________________________________
 
